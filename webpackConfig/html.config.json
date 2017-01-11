@@ -1,0 +1,5 @@
+{
+    "title": "React TS Starter",
+    "inFile": "./src/web/index.html",
+    "outFile": "index.html"
+}

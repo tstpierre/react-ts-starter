@@ -5,6 +5,8 @@ var HtmlPlugin = require('html-webpack-plugin');
 
 var PROD = (process.env.NODE_ENV === 'production');
 
+var htmlConfig = require('./webpackConfig/html.config.json');
+
 module.exports = {
     
     entry: [
@@ -51,10 +53,10 @@ module.exports = {
         }),
         new ExtractTextPlugin("styles.css"),
         new HtmlPlugin({
-            title: 'Sympton Journal',
+            title: htmlConfig.title,
             minify: false,
-            template: './src/web/index.html',
-            filename: 'index.html'
+            template: htmlConfig.inFile,
+            filename: htmlConfig.outFile
         }),
         new webpack.optimize.UglifyJsPlugin({
             mangle: false,
@@ -67,10 +69,10 @@ module.exports = {
         }),
         new ExtractTextPlugin("styles.css"),
         new HtmlPlugin({
-            title: 'Sympton Journal',
+            title: htmlConfig.title,
             minify: false,
-            template: './src/web/index.html',
-            filename: 'index.html'
+            template: htmlConfig.inFile,
+            filename: htmlConfig.outFile
         })
     ],
 
