@@ -10,11 +10,11 @@ var htmlConfig = require('./webpackConfig/html.config.json');
 module.exports = {
     
     entry: [
-        "./src/web/index.tsx"
+        "./src/index.tsx"
     ],
 
     output: {
-        path: __dirname + '/build/web/',
+        path: __dirname + '/build/',
         filename: 'bundle.js'
     },
 
@@ -74,14 +74,5 @@ module.exports = {
             template: htmlConfig.inFile,
             filename: htmlConfig.outFile
         })
-    ],
-
-    // When importing a module whose path matches one of the following, just
-    // assume a corresponding global variable exists and use that instead.
-    // This is important because it allows us to avoid bundling all of our
-    // dependencies, which allows browsers to cache those libraries between builds.
-    // externals: {
-    //     "react": "React",
-    //     "react-dom": "ReactDOM"
-    // },
+    ]
 };

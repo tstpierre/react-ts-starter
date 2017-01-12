@@ -2,7 +2,7 @@
   "name": "react-ts-starter",
   "version": "1.0.0",
   "description": "Boilerplate for creating a React application with TypeScript and Webpack",
-  "main": "index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "build": "jest && webpack",
     "devserver": "webpack-dev-server -w --hot --inline --progress --history-api-fallback &",
@@ -60,10 +60,6 @@
     "testRegex": "/__tests__/.*\\.(ts|tsx|js|jsx)$",
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/jest-ts-preprocessor.js"
-    },
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/web/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/web/styleMock.js"
     }
   }
 }

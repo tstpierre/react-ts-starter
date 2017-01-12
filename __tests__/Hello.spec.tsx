@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as TestUtils from 'react-addons-test-utils';
 
-import { Hello, IHelloProps } from '../../src/web/components/Hello';
+import { Hello, IHelloProps } from '../src/components/Hello';
 
-jest.dontMock('../../src/web/components/Hello.tsx');
+jest.dontMock('../src/components/Hello.tsx');
 
 describe('Hello', () => {
 
