@@ -5,7 +5,7 @@
   "main": "src/index.tsx",
   "scripts": {
     "build": "jest && webpack",
-    "devserver": "webpack-dev-server -w --hot --inline --progress --history-api-fallback &",
+    "devserver": "webpack-dev-server -w --hot --inline --progress --history-api-fallback",
     "test": "jest",
     "devtest": "jest --watch"
   },
